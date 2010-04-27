@@ -1,0 +1,234 @@
+/*
+Theme Name: VerTick (zh-hans)
+Theme URI: http://vertick.metaphox.name
+Description: A Wordpress theme optimised for vertical chinese.
+Version: 1.0
+Author: Metaphox
+Author URI: http://blog.metaphox.name/
+Tags: chinese, vertical-chinese, fixed-width, one-column, light, widgets
+*/
+
+/* Reset CSS  http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd,
+ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead,
+tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit;
+	font-style: inherit; font-size: 100%; font-family: inherit;
+	vertical-align: baseline; text-decoration:none;}
+/* remember to define focus styles! */
+:focus { outline: 0; }
+body { line-height: 1;	color: black; background: white; }
+ol, ul { list-style: none; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q {	quotes: "" ""; }
+/* CSS RESETTER ENDS HERE */
+
+
+body {
+	background: #302d23 url(images/bodybg.png);
+    font-size: 16px;
+	font-family: Palatino, "Palatino Linotype", "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", SimSun, monospace;	
+}
+
+#header .description{
+	text-align:right;
+	float:right;
+	margin-top:2em;
+	margin-right:-10px;
+	color:#eee;
+}
+
+#header .description .text-layer td{}
+
+#header h1 a{
+	font-size: 4em;
+	font-weight:bold;
+	color:#eee;
+	text-decoration: none;
+	text-align: center;	
+	font-family: "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", "STHei", "Microsoft Yahei", "SimHei", "HeiTi", sans-serif;
+}
+
+
+#page{
+	width:950px;
+	margin:0 auto;
+	padding:24px 10px 32px 0;
+}
+
+.posttitle small, .posttitle .postmetadata{
+	margin-top: 0.7em;
+}
+
+.posttitle h2{
+	font-size: 2em;
+	width: 40px;
+	margin-top:-0.625em;
+	margin-left: 20px;
+	padding-top: 0.5em;
+	text-align: center;
+	border-top: 0.125em double #999;
+}
+
+.posttitle h2 a{
+	color:#000;
+}
+
+.posttitle h2 a:hover{
+	color:#a00;
+}
+
+.posttitle a{
+	text-decoration:none;
+	color:#a00;
+}
+
+.posttitle small{
+	margin-right:24px;
+	width:12px;
+	overflow:hidden;
+	text-align:center;
+	font-size:0.75em;
+	float:right;
+	color:#666;
+	line-height:1.2em;
+}
+
+.posttitle small .author{
+	color:#222;
+}
+
+.posttitle .postmetadata{
+	margin-left: 24px;
+	width:12px;
+	font-size:0.75em;
+	line-height:1.1em;
+	float:left;
+}
+
+.posttitle .postmetadata span.category,
+.posttitle .postmetadata span.commentscounter,
+.posttitle .postmetadata span.editpostlink{
+	display: block;
+	margin-bottom:0.75em;
+}
+
+strong, em, b, i {
+	/* there is no italic style in chinese writing system */
+	font-style:normal;
+    font-weight:bold;
+}
+
+div#content{
+	background: #f3f2ee;
+	color: #302d23;
+	text-align:left;
+	width:850px;
+	padding:2em 0 2em 0;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+.posttitle{
+	float:right;
+	width:80px;
+}
+
+.post{
+	padding-top:2em;
+	border-top:0.25em double #999;
+}
+
+.entry{	
+	padding-left:50px;
+}
+
+#content .text-layer{
+	margin-bottom:32px;
+	border-bottom:1px dotted #6b4424;
+}
+
+div#header{
+	margin-top: 4em;
+	width: 100px;
+	float: right;
+	text-align:right;
+}
+
+div#sidebar{
+	background: #6b4424;
+	color:#000;
+	font-size:14px;
+	line-height:1.4;
+	width:810px;
+	margin-top:2em;
+	padding:2em 20px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+div#sidebar h2{
+	font-size:1.2em;
+}
+
+div#sidebar li ul{
+	margin-top:0.5em;
+}
+
+div#sidebar li.widget{
+	display:block;
+	float:left;
+	margin-right:3em;
+}
+
+div#sidebar a{
+	color: #000;
+}
+
+div#sidebar a:hover{
+	color: #fff;
+}
+
+div#content .entry a{
+	text-decoration:none !important;
+	color:#a00;
+}
+
+div#footer{
+	text-align:center;
+	color:#aaa;
+	width:810px;
+	margin-top:1em;
+	padding:1em 20px 1em 20px;
+	line-height:1.4;
+}
+
+div#footer a{
+	color:#ccc;
+}
+
+div#footer a:hover{
+	color:#fff;
+}
+
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+
+
+
+
+
