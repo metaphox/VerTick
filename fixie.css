@@ -1,0 +1,40 @@
+
+#respond #comment{
+	writing-mode: tb-rl;
+}
+
+#respond input{
+	writing-mode: tb-rl;
+	margin-bottom:1em;
+}
+
+#respond #author-para,
+#respond #email-para,
+#respond #url-para{
+	float:right;
+	width:1em;
+	margin:0 1em;
+}
+
+#respond .commenthint{
+	margin-top:1em;
+	text-align:left;
+	display: block;
+	width: 0.8em;
+	margin-left:0;
+}
+
+#respond textarea{
+	float:right;
+	height: 20em;
+	width: 29em;
+}
+
+#respond #submit{
+	float:right;
+	margin-right:1em;
+}
+
+.clearfix {
+    zoom: 1;     /* triggers hasLayout for IE */
+}

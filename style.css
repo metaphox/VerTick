@@ -27,11 +27,31 @@ blockquote:before, blockquote:after, q:before, q:after { content: ""; }
 blockquote, q {	quotes: "" ""; }
 /* CSS RESETTER ENDS HERE */
 
+strong, em, b, i {
+	/* there is no italic style in chinese writing system */
+	font-style:normal;
+    font-weight:bold;
+}
 
+/* wrapper */
 body {
 	background: #302d23 url(images/bodybg.png);
     font-size: 16px;
 	font-family: Palatino, "Palatino Linotype", "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", SimSun, monospace;	
+}
+
+#page{
+	width:950px;
+	margin:0 auto;
+	padding:24px 10px 32px 0;
+}
+
+/* header */
+#header{
+	margin-top: 4em;
+	width: 100px;
+	float: right;
+	text-align:right;
 }
 
 #header .description{
@@ -42,8 +62,6 @@ body {
 	color:#eee;
 }
 
-#header .description .text-layer td{}
-
 #header h1 a{
 	font-size: 4em;
 	font-weight:bold;
@@ -53,13 +71,43 @@ body {
 	font-family: "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", "STHei", "Microsoft Yahei", "SimHei", "HeiTi", sans-serif;
 }
 
-
-#page{
-	width:950px;
-	margin:0 auto;
-	padding:24px 10px 32px 0;
+/* content container */
+div#content{
+	background: #f3f2ee;
+	color: #302d23;
+	text-align:left;
+	width:850px;
+	padding:2em 0 2em 0;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
 }
 
+/* navigation */
+
+#content .navigation{
+	padding:0 3em 1em 3em;
+	height:1.5em;
+}
+
+#content .navigation a{
+	color:#999;
+}
+
+#content .navigation a:hover{
+	color:#a00;
+}
+
+#content .navigation .alignleft{
+	float: left;
+}
+
+#content .navigation .alignright{
+	float: right;
+}
+
+
+/* Post */
 .posttitle small, .posttitle .postmetadata{
 	margin-top: 0.7em;
 }
@@ -89,9 +137,9 @@ body {
 
 .posttitle small{
 	margin-right:24px;
-	width:12px;
+	width:1.2em;
 	overflow:hidden;
-	text-align:center;
+	text-align:right;
 	font-size:0.75em;
 	float:right;
 	color:#666;
@@ -100,38 +148,37 @@ body {
 
 .posttitle small .author{
 	color:#222;
+	display:block;
+	border-left:1px solid #999;
+	padding-left:0.05em;
+	margin-bottom: 0.2em;
 }
 
 .posttitle .postmetadata{
-	margin-left: 24px;
-	width:12px;
+	margin-left: 22px;
+	width:1.2px;
 	font-size:0.75em;
-	line-height:1.1em;
+	line-height:1.2em;
 	float:left;
 }
 
-.posttitle .postmetadata span.category,
-.posttitle .postmetadata span.commentscounter,
-.posttitle .postmetadata span.editpostlink{
-	display: block;
+.posttitle .postmetadata span.category{
+	margin-bottom: 3em; display: block;
+}
+
+.posttitle .postmetadata span.category a{
+	display: block !important;
 	margin-bottom:0.75em;
+	width:1em;
+	padding-left:0.2em;
 }
-
-strong, em, b, i {
-	/* there is no italic style in chinese writing system */
-	font-style:normal;
-    font-weight:bold;
-}
-
-div#content{
-	background: #f3f2ee;
-	color: #302d23;
-	text-align:left;
-	width:850px;
-	padding:2em 0 2em 0;
-	border-radius:4px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
+.posttitle .postmetadata span.commentscounter a,
+.posttitle .postmetadata span.editpostlink a{
+	display: block !important;
+	margin-bottom:0.75em;
+	width:1em;
+	padding-left:0.2em;
+	border-left:1px dotted #a00;
 }
 
 .posttitle{
@@ -148,18 +195,54 @@ div#content{
 	padding-left:50px;
 }
 
-#content .text-layer{
+.entry a{
+	text-decoration:none !important;
+	color:#a00;
+	border-left:1px dotted #a00;
+}
+
+.entry .text-layer{
 	margin-bottom:32px;
 	border-bottom:1px dotted #6b4424;
 }
 
-div#header{
-	margin-top: 4em;
-	width: 100px;
-	float: right;
-	text-align:right;
+/* comments area */
+
+.nocomments{
+	text-align: center;
+	margin-bottom: 2em;
 }
 
+#respond{
+	width: 610px;
+	padding:1em ;
+	text-align:left;
+	background:#eec;
+	margin-left:4em;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+#respond h3{
+	font-size:1.2em;
+	width:1.2em;
+	display:block;
+	overflow: hidden;
+	float: right;
+}
+
+#respond #author-para,
+#respond #email-para,
+#respond #url-para{}
+
+#respond .commenthint{
+	font-size:0.8em;
+	color:#999;	
+	margin-left:1em;
+}
+
+/* sidebar */
 div#sidebar{
 	background: #6b4424;
 	color:#000;
@@ -195,10 +278,7 @@ div#sidebar a:hover{
 	color: #fff;
 }
 
-div#content .entry a{
-	text-decoration:none !important;
-	color:#a00;
-}
+/* footer */
 
 div#footer{
 	text-align:center;
@@ -217,6 +297,7 @@ div#footer a:hover{
 	color:#fff;
 }
 
+/* misc */
 
 .clearfix:after {
 	content: ".";

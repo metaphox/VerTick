@@ -22,8 +22,8 @@ $(document).ready(function(){
 			//fontFamily: "STSong, SimSun, monospace",
 			
   	});
-	//$(".posttitle small");
-	$('.commentscounter a').each(function(){
+	<?php $cmtelmt = is_singular() ? '#comments span.cnt' : '.commentscounter a'; ?> 
+	$('<?php echo $cmtelmt ?>').each(function(){
 		var ze = $(this).text().indexOf('则');
 		if(ze>0){
 			$(this).text(ch_num_l1k($(this).text().substring(0, ze))+
