@@ -8,18 +8,17 @@
 	<?php
 		return;
 	}
-?>
 
-<!-- You can start editing here. -->
+# You can start editing here. -->
 
-<?php if ( have_comments() ) : ?>
-	<h3 id="comments"><?php the_title(); ?>有<span class="cnt"><?php comments_number('无评论', '一则评论', '%则评论' );?></span></h3>
+	if ( have_comments() ) : ?>
+	<h3 id="comments"><span class="cnt"><?php comments_number('无评论', '一则评论', '%则评论' );?></span></h3>
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>
 		<div class="alignright"><?php next_comments_link() ?></div>
 	</div>
 	<ol class="commentlist">
-	<?php wp_list_comments(); ?>
+	<?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
 	</ol>
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>

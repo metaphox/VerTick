@@ -9,7 +9,7 @@
 			 	echo date_translate(date('Y|F|j'));
 			?></small>
 			<p class="postmetadata">
-				<span class="tags"><?php the_tags('标签', ', ', '<br />'); ?></span><span class="category"><?php the_category(', ') ?></span><span class="editpostlink"><?php edit_post_link('编辑', '', ''); ?></span><span class="commentscounter"><?php comments_popup_link('无人置评', '1则评论', '%则评论', 'comments-link', '不可评论'); ?></span>
+				<span class="tags"><?php the_tags('标签', ' ', '<br />'); ?></span><span class="category"><?php the_category(' ') ?></span><span class="editpostlink"><?php edit_post_link('编辑', '', ''); ?></span><span class="commentscounter"><?php comments_popup_link('无人置评', '1则评论', '%则评论', 'comments-link', '不可评论'); ?></span>
 			</p>
 			</div>
 			<div class="entry lp-vertical lp-width-720 lp-height-450 lp-font-size-16"><?php the_content('Read the rest of this entry &raquo;'); ?></div>

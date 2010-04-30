@@ -18,8 +18,8 @@
 			 		the_tags( '<p class="tags">', ', ', '</p>'); ?>			 	
 				</small>
 				<p class="postmetadata">
-					<span class="tags"><?php the_tags('标签', ', ', '<br />'); ?></span>
-			 	<span class="category"><?php the_category('—') ?></span>
+					<span class="tags"><?php the_tags('标签', ' ', '<br />'); ?></span>
+			 	<span class="category"><?php the_category(' ') ?></span>
 			 	<?php if(pings_open()){	?>
 					<span class="commentscounter"><a href="<?php trackback_url(); ?>" rel="trackback">回应链接</a></span>
 				<?php } 
@@ -33,7 +33,7 @@
 				//dont add space/return here
 				the_content('<p class="serif">阅读全文</p>');
 				wp_link_pages(array(
-					'before' => '<p><strong>Pages:</strong> ',
+					'before' => '<p><strong>页面</strong> ',
 					'after' => '</p>',
 					'next_or_number' => 'number'
 				));?>				
@@ -41,7 +41,7 @@
 		</div>
 	<?php comments_template(); ?> 	
 	<?php endwhile; else: ?>
-		<p>无果</p>
+		<p>无内容</p>
 	<?php endif; ?>
 
 	</div>
