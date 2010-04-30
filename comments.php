@@ -12,7 +12,7 @@
 # You can start editing here. -->
 
 	if ( have_comments() ) : ?>
-	<h3 id="comments"><span class="cnt"><?php comments_number('无评论', '一则评论', '%则评论' );?></span></h3>
+	<h3 id="comments"><span class="cnt"><?php comments_number('尚无评论', '1则评论', '%则评论' );?></span></h3>
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div>
 		<div class="alignright"><?php next_comments_link() ?></div>
