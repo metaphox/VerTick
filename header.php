@@ -16,11 +16,11 @@
 <script type="text/javascript">
 $(document).ready(function(){
   	Nehan.LayoutMapper.start("div", {
-    		charImgRoot:"<?php echo get_template_directory_uri() ?>/images",
+    		charImgRoot:"<?php echo get_template_directory_uri() ?>/images/traditional",
 			//fontFamily: "STFangsong, STSong, FangSong, SimSun, monospace",
-			fontFamily: "STKaiTi, KaiTi, SimSun, monospace",
-			//fontFamily: "STSong, SimSun, monospace",
-			
+			//fontFamily: "STKaiTi, KaiTi, SimSun, WenQuanYi Micro Hei Mono, serif",
+			//fontFamily: "STSong, SimSun, WenQuanYi Micro Hei Mono, monospace",	
+			fontFamily: "Lisong,Hiragino Mincho Pro",
   	});
 	<?php $cmtelmt = is_singular() ? '#comments span.cnt' : '.commentscounter a'; ?> 
 	$('<?php echo $cmtelmt ?>').each(function(){

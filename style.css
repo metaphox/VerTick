@@ -67,7 +67,7 @@ strong,em,b,i {
 body {
 	background: #302d23 url(images/bodybg.png);
 	font-size: 16px;
-	font-family: Palatino, "Palatino Linotype", "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", SimSun, monospace;
+	font-family: Palatino, "Palatino Linotype", "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", SimSun, "WenQuanYi Micro Hei Mono", monospace;
 }
 
 #page {
@@ -98,7 +98,7 @@ body {
 	color: #eee;
 	text-decoration: none;
 	text-align: center;
-	font-family: "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", STHei, "Microsoft Yahei", SimHei, HeiTi, sans-serif;
+	font-family: "Hiragino Sans GB", "Hiragino Kaku Gothic Pro", STHei, "Microsoft Yahei", SimHei, HeiTi, "WenQuanYi Micro Hei Mono", sans-serif;
 }
 
 /* content container */
@@ -137,7 +137,7 @@ div#content {
 
 /* Post */
 .posttitle small,.posttitle .postmetadata {
-	margin-top: .7em;
+	margin-top: 0.7em;
 }
 
 .posttitle h2 {
@@ -145,9 +145,9 @@ div#content {
 	width: 40px;
 	margin-top: -0.625em;
 	margin-left: 20px;
-	padding-top: .5em;
+	padding-top: 0.5em;
 	text-align: center;
-	border-top: .125em double #999;
+	border-top: 0.125em double #999;
 }
 
 .posttitle h2 a {
@@ -168,7 +168,7 @@ div#content {
 	width: 1.2em;
 	overflow: hidden;
 	text-align: right;
-	font-size: .75em;
+	font-size: 0.75em;
 	float: right;
 	color: #666;
 	line-height: 1.2em;
@@ -178,14 +178,14 @@ div#content {
 	color: #222;
 	display: block;
 	border-left: 1px solid #999;
-	padding-left: .05em;
-	margin-bottom: .2em;
+	padding-left: 0.05em;
+	margin-bottom: 0.2em;
 }
 
 .posttitle .postmetadata {
 	margin-left: 22px;
 	width: 1.2px;
-	font-size: .75em;
+	font-size: 0.75em;
 	line-height: 1.2em;
 	float: left;
 }
@@ -197,16 +197,16 @@ div#content {
 
 .posttitle .postmetadata span.category a {
 	display: block!important;
-	margin-bottom: .75em;
+	margin-bottom: 0.75em;
 	width: 1em;
-	padding-left: .2em;
+	padding-left: 0.2em;
 }
 
 .posttitle .postmetadata span.commentscounter a,.posttitle .postmetadata span.editpostlink a {
 	display: block!important;
-	margin-bottom: .75em;
+	margin-bottom: 0.75em;
 	width: 1em;
-	padding-left: .2em;
+	padding-left: 0.1em;
 	border-left: 1px dotted #a00;
 }
 
@@ -217,7 +217,7 @@ div#content {
 
 .post {
 	padding-top: 2em;
-	border-top: .25em double #999;
+	border-top: 0.25em double #999;
 }
 
 .entry {
@@ -267,6 +267,10 @@ div#content {
 	margin:1em 0.7em 0 0;
 }
 
+strong.approve{
+	color:#900 !important;
+}
+
 .commentlist .comment-meta a{
 	display: block;
 	color:#a00;
@@ -313,7 +317,7 @@ div#content {
 }
 
 #respond .commenthint {
-	font-size: .8em;
+	font-size: 0.8em;
 	color: #999;
 	margin-left: 1em;
 }

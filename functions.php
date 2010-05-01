@@ -5,7 +5,7 @@ function mytheme_comment($comment, $args, $depth)
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
       <div class="comment-author vcard">
-      <?php echo get_avatar($comment, $size='48', $default='<path_to_url>' ); ?>
+      <?php echo get_avatar($comment, $size='48'); ?>
 	  <div class="comment-meta">
 	  		<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php
 	  		echo date_translate(get_comment_date('Y|F|j'))
@@ -14,10 +14,13 @@ function mytheme_comment($comment, $args, $depth)
 	  		?></div><?php
 	  		printf('<span class="commentor">%s</span>', get_comment_author_link()) 
 	  		?></div>
-      <?php if ($comment->comment_approved == '0') : ?>
-         <em><?php _e('（此评论等待作者许可）') ?></em>
-      <?php endif; ?>      
-	  <div class="commenttext lp-vertical lp-width-550 lp-height-350 lp-font-size-14"><?php comment_text() ?></div>
+      
+	  <div class="commenttext lp-vertical lp-width-550 lp-height-350 lp-font-size-14"><?php
+	  	if ($comment->comment_approved == '0') :
+	  	?><strong>（此评论等待作者许可）</strong><br /><br /><?php
+	  	 endif;
+	  	 comment_text()
+	  	?></div>
       <div class="reply">
          <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
       </div>
