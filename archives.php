@@ -4,12 +4,12 @@
 
 <?php get_search_form(); ?>
 
-<h2>Archives by Month:</h2>
+<h2><?php echo _tc("每月存档") ?></h2>
 	<ul>
 		<?php wp_get_archives('type=monthly'); ?>
 	</ul>
 
-<h2>Archives by Subject:</h2>
+<h2><?php echo _tc("分主题存档") ?></h2>
 	<ul>
 		 <?php wp_list_categories(); ?>
 	</ul>

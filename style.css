@@ -135,6 +135,10 @@ div#content {
 	float: right;
 }
 
+#content .pagetitle{
+	text-align: center;
+}
+
 /* Post */
 .posttitle small,.posttitle .postmetadata {
 	margin-top: 0.7em;

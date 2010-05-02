@@ -1,4 +1,10 @@
 /*
+
+	Warning: this is a hacked version of nehan 1.0.5.3, originally written by Watanabe Masaki
+	and published under MIT licence.
+	
+	The modifications are but only a few,  
+
  source : nehan.js
  version : 1.0.5.3
  site : http://tategakibunko.mydns.jp/
@@ -271,6 +277,7 @@ if(!Nehan.ParserHook){
 
     // if mac and fontfamily is not defined properly, disable transform method.
     if(Env.isMac && this.fontFamily){
+    	//##VERTICK comment out this line to force enable mac transform. ugly tho.
       Env.canTransform = (this.fontFamily.match(/Osaka-Mono/));
     }
 
@@ -284,7 +291,7 @@ if(!Nehan.ParserHook){
     this.wrapCss += "white-space:nowrap;"; // when tail NG happend, disable auto newline even if over flow layout size.
     
     if(this.isV){
-	  //original nehan has border-collapse, not really sure why
+	  //##VERTICK original nehan has border-collapse here, not really sure why
       //this.wrapCss += "border-collapse:collapse;";
     } else {
       this.wrapCss += "line-height:1.8em;";
@@ -550,6 +557,7 @@ if(!Nehan.ParserHook){
     return "<" + tag + " " + this.tagAttr(attr) + (isSingle? " />" : " >");
   };
 
+  //##VERTICK here are several puncs changed for better chinese text interpretation
   StreamParser.prototype.charToImg = function(c){
     switch(c){
       case "「": case "｢": case "‘": c = "kakko1.gif"; break;
@@ -625,7 +633,7 @@ if(!Nehan.ParserHook){
 	"line-height": height + "px",
 	"margin":"0",
 	"padding":"0",
-        "border-width":"0"
+    "border-width":"0"
     };
     var attr = {
 	"src": imgPath,
@@ -1477,7 +1485,7 @@ if(!Nehan.ParserHook){
     if(Env.isIE){
       this.boutenStartPos += Math.floor(this.layout.baseLetterSpacing * this.fontScale);
     }
-	this.boutenStartPos += 6; //small hack for correcting the disc position
+	this.boutenStartPos += 6; //##VERTICKsmall hack for correcting the disc position
     this.boutenStr = this.getBoutenStr(tagName);
   };
 

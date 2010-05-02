@@ -16,15 +16,22 @@
 <script type="text/javascript">
 $(document).ready(function(){
   	Nehan.LayoutMapper.start("div", {
-    		charImgRoot:"<?php echo get_template_directory_uri() ?>/images/traditional",
-			//fontFamily: "STFangsong, STSong, FangSong, SimSun, monospace",
-			//fontFamily: "STKaiTi, KaiTi, SimSun, WenQuanYi Micro Hei Mono, serif",
-			//fontFamily: "STSong, SimSun, WenQuanYi Micro Hei Mono, monospace",	
-			fontFamily: "Lisong,Hiragino Mincho Pro",
+    		charImgRoot:"<?php echo get_template_directory_uri() . ( get_option('vertick_punc') == 'traditional' ? '/images/traditional' : '/images/modern') ?>",
+    		<?php
+    		$fontStack = array(
+    			//tweak here if you dislike simplified chinese fonts
+    			"Song"	=> 'fontFamily: "STSong, Hiragino Mincho Pro, LiSong Pro, MS Mincho, SimSun, WenQuanYi Micro Hei, serif"',
+				"Hei"	=> 'fontFamily: "Hiragino Sans GB, Hiragino Kaku Gothic Pro, LiHei Pro, Microsoft YaHei, SimHei, WenQuanYi Micro Hei, sans-serif"',
+				"FangSong" => 'fontFamily: "STFangSong, FangSong, MS Mincho, SimSun, WenQuanYi Micro Hei, serif"',
+				"Kai"	=> 'fontFamily: "STKaiti, KaiTi, WenQuanYi Micro Hei, serif"'
+			);
+			$fs = get_option('vertick_fontstack');
+			echo $fs ? $fontStack[$fs] : $fontStack['Song'];
+    		?>
   	});
 	<?php $cmtelmt = is_singular() ? '#comments span.cnt' : '.commentscounter a'; ?> 
 	$('<?php echo $cmtelmt ?>').each(function(){
-		var ze = $(this).text().indexOf('则');
+		var ze = $(this).text().indexOf('<?php echo _tc('则') ?>');
 		if(ze>0){
 			$(this).text(ch_num_l1k($(this).text().substring(0, ze))+
 				$(this).text().substring(ze, $(this).text().length));

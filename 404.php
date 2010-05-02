@@ -2,7 +2,7 @@
 
 	<div id="content">
 
-		<h2 class="center">Error 404 - Not Found</h2>
+		<h2 class="center">四零四</h2>
 
 	</div>
 
