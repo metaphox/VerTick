@@ -53,7 +53,7 @@
 			echo("<h2 class='center'>"._tc('抱歉，这一日期范围内尚无任何文章')."</h2>");
 		} else if ( is_author() ) { // If this is a category archive
 			$userdata = get_userdatabylogin(get_query_var('author_name'));
-			printf("<h2 class='center'>"._tc('抱歉，%s尚未发布任何文章')".</h2>", $userdata->display_name);
+			printf("<h2 class='center'>"._tc('抱歉，%s尚未发布任何文章').".</h2>", $userdata->display_name);
 		} else {
 			echo("<h2 class='center'>"._tc('抱歉，未找到任何文章')."</h2>");
 		}
