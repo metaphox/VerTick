@@ -20,10 +20,10 @@ $(document).ready(function(){
     		<?php
     		$fontStack = array(
     			//tweak here if you dislike simplified chinese fonts
-    			"Song"	=> 'fontFamily: "STSong, Hiragino Mincho Pro, LiSong Pro, MS Mincho, SimSun, WenQuanYi Micro Hei, serif"',
-				"Hei"	=> 'fontFamily: "Hiragino Sans GB, Hiragino Kaku Gothic Pro, LiHei Pro, Microsoft YaHei, SimHei, WenQuanYi Micro Hei, sans-serif"',
-				"FangSong" => 'fontFamily: "STFangSong, FangSong, MS Mincho, SimSun, WenQuanYi Micro Hei, serif"',
-				"Kai"	=> 'fontFamily: "STKaiti, KaiTi, WenQuanYi Micro Hei, serif"'
+    			"Song"	=> 'fontFamily: "STSong, Hiragino Mincho Pro, LiSong Pro, MS Mincho, SimSun, WenQuanYi Micro Hei Mono"',
+				"Hei"	=> 'fontFamily: "Hiragino Sans GB, Hiragino Kaku Gothic Pro, LiHei Pro, Microsoft YaHei, SimHei, WenQuanYi Micro Hei Mono"',
+				"FangSong" => 'fontFamily: "STFangSong, FangSong, MS Mincho, SimSun, WenQuanYi Micro Hei Mono"',
+				"Kai"	=> 'fontFamily: "STKaiti, KaiTi, WenQuanYi Micro Hei Mono"'
 			);
 			$fs = get_option('vertick_fontstack');
 			echo $fs ? $fontStack[$fs] : $fontStack['Song'];

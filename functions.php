@@ -43,7 +43,7 @@ $options = array (
 function vertick_add_admin()
 {
 	global $themename, $shortname, $options;
-	if ( $_GET['page'] == basename(__FILE__) and isset($_REQUEST['action']) and 'save' == $_REQUEST['action'] ) {
+	if ( isset($_GET['page']) and $_GET['page'] == basename(__FILE__) and isset($_REQUEST['action']) and 'save' == $_REQUEST['action'] ) {
 		foreach ($options as $value) {
 			if (isset($_REQUEST[ $value['id'] ])) update_option( $value['id'], $_REQUEST[ $value['id'] ] );
 		}

@@ -217,15 +217,15 @@ if(!Nehan.ParserHook){
 
       // check if browser can support transform method
       if (browser == "chrome"){
-	this.canTransform = true;
+		this.canTransform = true;
       } else if (browser == "safari"){
-	this.canTransform = true;
+		this.canTransform = true;
       } else if (browser == "firefox" && version >= 3.5){
-	this.canTransform = true;
+		this.canTransform = true;
       } else if (this.isIE && !this.isVistaOrWin7 && version >= 6.0){
-	this.canTransform = true;
+		this.canTransform = true;
       } else {
-	this.canTransform = false;
+		this.canTransform = false;
       }
     }
   };
@@ -278,7 +278,7 @@ if(!Nehan.ParserHook){
     // if mac and fontfamily is not defined properly, disable transform method.
     if(Env.isMac && this.fontFamily){
     	//##VERTICK comment out this line to force enable mac transform. ugly tho.
-      Env.canTransform = (this.fontFamily.match(/Osaka-Mono/));
+      //Env.canTransform = (this.fontFamily.match(/Osaka-Mono/));
     }
 
     this.wrapCss = "";
@@ -862,7 +862,7 @@ if(!Nehan.ParserHook){
     var ngChars = [ "？", "】", "，", ",", "》", "。",
 		   "、", "・", "｣", "」", "』","）", "＞", "〉",
 		   "≫","]", "〕", "]","］","！","!",") ",
-		   "々", "ゝ", "ー", "－" ];
+		   "々", "ゝ", "ー", "－", "”", "’", "：" ]; //#VerTick adds ”, ’, and ：
     for(i = 0; i < ngChars.length; i++){
       if(s == ngChars[i]){
 	return true;
@@ -874,7 +874,7 @@ if(!Nehan.ParserHook){
   StreamParser.prototype.isTailNg = function(s){
     var ngChars = [ "【", "《", "「", "『", "（",
 		   "［" , "[" , "〔" ,
-		   "＜", "≪", "(", "〈" ];
+		   "＜", "≪", "(", "〈", "“", "‘" ];	//#VerTick adds “ and ‘
     for(i = 0; i < ngChars.length; i++){
       if(s == ngChars[i]){
 	return true;
