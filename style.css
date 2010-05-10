@@ -101,6 +101,7 @@ body {
 	width: 950px;
 	margin: 0 auto;
 	padding: 24px 10px 32px 0;
+	overflow-x: hidden; /* to hide the horz. scrollbar when h2 being fixed */
 }
 
 /* header */
@@ -173,11 +174,9 @@ div#content {
 
 .posttitle h2 {
 	font-size: 2em;
-	width: 40px;
 	margin-top: -0.625em;
 	margin-left: 20px;
 	padding-top: 0.5em;
-	text-align: center;
 	border-top: 0.125em double #999;	
 }
 
@@ -203,6 +202,7 @@ div#content {
 	float: right;
 	color: #666;
 	line-height: 1.2em;
+	display: none;
 }
 
 .posttitle small .author {
@@ -219,6 +219,7 @@ div#content {
 	font-size: 0.75em;
 	line-height: 1.2em;
 	float: left;
+	display: none;
 }
 
 .posttitle .postmetadata span.category {

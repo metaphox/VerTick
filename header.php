@@ -37,6 +37,7 @@ $(document).ready(function(){
 				$(this).text().substring(ze, $(this).text().length));
 		}
 	});
+	vertilizeArticleH2();
 });
 </script>
 
