@@ -15,6 +15,7 @@
 <script charset="utf-8" type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/various.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	vertilizeArticleH2();
   	Nehan.LayoutMapper.start("div", {
     		charImgRoot:"<?php echo get_template_directory_uri() . ( get_option('vertick_punc') == 'traditional' ? '/images/traditional' : '/images/modern') ?>",
     		<?php
@@ -36,8 +37,7 @@ $(document).ready(function(){
 			$(this).text(ch_num_l1k($(this).text().substring(0, ze))+
 				$(this).text().substring(ze, $(this).text().length));
 		}
-	});
-	vertilizeArticleH2();
+	});	
 });
 </script>
 

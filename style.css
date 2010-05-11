@@ -177,7 +177,8 @@ div#content {
 	margin-top: -0.625em;
 	margin-left: 20px;
 	padding-top: 0.5em;
-	border-top: 0.125em double #999;	
+	border-top: 0.125em double #999;
+	width: 40px;
 }
 
 .posttitle h2 a {
